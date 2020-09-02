@@ -30,11 +30,10 @@ export default {
       .append("svg")
       .attr("height", this.svgH)
       .attr("width", this.svgW)
-      .attr("style", "background:#ff9900")
 
     // 添加比例尺
-    this.xscale = D3.scaleLinear() //  创建一个比例尺
-      .domain([0, this.list.length]) //  比例尺范围
+    this.xscale = D3.scaleLinear() //  创建一个连续的线性比例尺
+      .domain([0, this.list.length + 1]) //  比例尺范围
       .range([this.margin.left, this.svgW - this.margin.right]) //  比例尺到 svg 容器的距离，这里是左右距离，有了距离就知道了比例尺宽度，从而可以与 domain 的值对应起来
 
     this.yscale = D3.scaleLinear()
@@ -43,20 +42,25 @@ export default {
 
     // 坐标轴（基于比例尺）
     this.xAxis = D3.axisBottom(this.xscale) //  刻度向下
+      .tickSize(-(this.svgH - this.margin.bottom - this.margin.top)) //  网格线，其实就是刻度线(svg 高度减去上下 margin 再取反)
       .ticks(this.list.length) //
     this.yAxis = D3.axisRight(this.yscale)
 
+    // 画坐标轴
     this.svg
       .append("g")
       .attr("class", "xAxis")
+      .attr("transform", `translate(0,${this.svgH - this.margin.bottom})`) //  将坐标轴从原点向下平移
       .call(this.xAxis)
-      .attr("transform", `translate(0,${this.svgH - this.margin.bottom})`)
+
+    // 画坐标轴
     this.svg
       .append("g")
       .attr("class", "yAxis")
+      .attr("transform", `translate(${this.margin.left},0)`) //  将坐标轴从原点向右平移
       .call(this.yAxis)
-      .attr("transform", `translate(${this.margin.left},0)`)
 
+    // 画柱状图
     this.svg
       .append("g")
       .attr("class", "rect")
@@ -64,20 +68,26 @@ export default {
       .data(this.list)
       .enter()
       .append("rect")
-      .attr("height", d => this.svgH - this.margin.bottom - this.yscale(d))
+      .attr("height", d => this.svgH - this.margin.bottom - this.yscale(d)) // this.yscale(d) 返回的是 d 对应的 range
       .attr("width", this.barWidth - this.barPadding)
       .attr("x", (d, i) => this.xscale(i + 0.5))
-      .attr("y", d => this.yscale(d))
+      .attr("y", d => this.yscale(d)) //  标识柱状图 Y 轴起点，假如图表在第四象限，对于一个竖向的柱状图，上面为起点
       .attr("fill", "#1890ff")
 
+    // 手动触发数据变化
     D3.select("button").on("click", () => {
-      let newData = [
-        RANDOM(0, 10),
-        RANDOM(0, 10),
-        RANDOM(0, 10),
-        RANDOM(0, 10),
-        RANDOM(0, 10)
-      ]
+      const rdm = RANDOM(3, 6)
+      let newData = []
+      for (let i = 0; i < rdm; i++) {
+        newData.push(RANDOM(0, 10))
+      }
+      // let newData = [
+      //   RANDOM(0, 10),
+      //   RANDOM(0, 10),
+      //   RANDOM(0, 10),
+      //   RANDOM(0, 10),
+      //   RANDOM(0, 10)
+      // ]
       const rdmColor = `rgb(${RANDOM(0, 255)},${RANDOM(0, 255)},${RANDOM(
         0,
         255
@@ -93,11 +103,38 @@ export default {
         })
         .attr("fill", rdmColor)
     })
+
+    // 自动触发数据变化
+    // clearInterval(this.timer)
+    // this.timer = setInterval(() => {
+    //   let newData = [
+    //     RANDOM(0, 10),
+    //     RANDOM(0, 10),
+    //     RANDOM(0, 10),
+    //     RANDOM(0, 10),
+    //     RANDOM(0, 10)
+    //   ]
+    //   const rdmColor = `rgb(${RANDOM(0, 255)},${RANDOM(0, 255)},${RANDOM(
+    //     0,
+    //     255
+    //   )})`
+    //   D3.selectAll("rect")
+    //     .data(newData)
+    //     .transition()
+    //     .attr("y", d => {
+    //       return this.yscale(d)
+    //     })
+    //     .attr("height", d => {
+    //       return this.svgH - 30 - this.yscale(d)
+    //     })
+    //     .attr("fill", rdmColor)
+    // }, 1500)
   },
   computed: {
     barWidth() {
       return (
-        (this.svgW - this.margin.right - this.margin.left) / this.list.length
+        (this.svgW - this.margin.right - this.margin.left) /
+        (this.list.length + 1)
       )
     }
   },
