@@ -11,7 +11,7 @@ export default {
   props: {},
   data() {
     return {
-      list: [5, 5, 5, 5, 5], //数据源
+      list: [2, 4, 6, 8, 10], //数据源
       svgH: 400,
       svgW: 400,
       margin: { top: 30, left: 30, bottom: 30, right: 30 }, //  图表到 svg 容器的四个方向的距离
@@ -44,7 +44,7 @@ export default {
     this.xAxis = D3.axisBottom(this.xscale) //  刻度向下
       .tickSize(-(this.svgH - this.margin.bottom - this.margin.top)) //  网格线，其实就是刻度线(svg 高度减去上下 margin 再取反)
       .ticks(this.list.length) //
-    this.yAxis = D3.axisRight(this.yscale)
+    this.yAxis = D3.axisLeft(this.yscale)
 
     // 画坐标轴
     this.svg
@@ -61,13 +61,15 @@ export default {
       .call(this.yAxis)
 
     // 画柱状图（初始化）
-    this.svg
+    let rect = this.svg
       .append("g")
       .attr("class", "rect")
       .selectAll("rect")
       .data(this.list)
       .enter()
       .append("rect")
+
+    rect
       .attr("height", d => this.svgH - this.margin.bottom - this.yscale(d)) // this.yscale(d) 返回的是 d 对应的 range
       .attr("width", this.barWidth - this.barPadding)
       .attr("x", (d, i) => this.xscale(i + 0.5))
@@ -75,7 +77,23 @@ export default {
       .attr("fill", "#1890ff")
 
     // 手动触发数据变化
-    D3.select("button").on("click", () => {
+    D3.select("button").on("click", this.dataChange)
+
+    // setInterval(() => {
+    //   this.dataChange()
+    // }, 500)
+  },
+  computed: {
+    barWidth() {
+      return (
+        (this.svgW - this.margin.right - this.margin.left) /
+        (this.list.length + 1)
+      )
+    }
+  },
+  watch: {},
+  methods: {
+    dataChange() {
       // 随机生成柱状图个数
       const rdm = RANDOM(1, 6)
       let newData = []
@@ -89,10 +107,24 @@ export default {
         255
       )})`
 
-      this.svg
+      D3.selectAll("animate").remove() //  清除所有的 animate
+
+      let rect = this.svg
         .selectAll("rect")
         .data(newData)
         .join("rect")
+
+      // 大于 5 就添加动画明暗特效
+      rect
+        .filter((d, i) => d > 5)
+        .append("animate")
+        .attr("attributeName", "fill")
+        .attr("values", "red;black;red;")
+        .attr("begin", "0s")
+        .attr("dur", "2s")
+        .attr("repeatCount", "indefinite")
+
+      rect
         .transition()
         .attr("y", d => {
           return this.yscale(d)
@@ -109,18 +141,8 @@ export default {
             return rdmColor
           }
         })
-    })
-  },
-  computed: {
-    barWidth() {
-      return (
-        (this.svgW - this.margin.right - this.margin.left) /
-        (this.list.length + 1)
-      )
     }
-  },
-  watch: {},
-  methods: {}
+  }
 }
 </script>
 
