@@ -23,8 +23,8 @@ export default {
   position: absolute;
   left: 600px;
   overflow: hidden;
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
   background: orange;
   &:after {
     position: absolute;
