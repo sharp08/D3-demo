@@ -60,7 +60,7 @@ export default {
       .attr("transform", `translate(${this.margin.left},0)`) //  将坐标轴从原点向右平移
       .call(this.yAxis)
 
-    // 画柱状图
+    // 画柱状图（初始化）
     this.svg
       .append("g")
       .attr("class", "rect")
@@ -76,59 +76,40 @@ export default {
 
     // 手动触发数据变化
     D3.select("button").on("click", () => {
-      const rdm = RANDOM(3, 6)
+      // 随机生成柱状图个数
+      const rdm = RANDOM(1, 6)
       let newData = []
       for (let i = 0; i < rdm; i++) {
         newData.push(RANDOM(0, 10))
       }
-      // let newData = [
-      //   RANDOM(0, 10),
-      //   RANDOM(0, 10),
-      //   RANDOM(0, 10),
-      //   RANDOM(0, 10),
-      //   RANDOM(0, 10)
-      // ]
+
+      // 随机色
       const rdmColor = `rgb(${RANDOM(0, 255)},${RANDOM(0, 255)},${RANDOM(
         0,
         255
       )})`
-      D3.selectAll("rect")
+
+      this.svg
+        .selectAll("rect")
         .data(newData)
+        .join("rect")
         .transition()
         .attr("y", d => {
           return this.yscale(d)
         })
+        .attr("x", (d, i) => this.xscale(i + 0.5))
+        .attr("width", this.barWidth - this.barPadding)
         .attr("height", d => {
           return this.svgH - 30 - this.yscale(d)
         })
-        .attr("fill", rdmColor)
+        .attr("fill", d => {
+          if (d >= 5) {
+            return "#ed4014"
+          } else {
+            return rdmColor
+          }
+        })
     })
-
-    // 自动触发数据变化
-    // clearInterval(this.timer)
-    // this.timer = setInterval(() => {
-    //   let newData = [
-    //     RANDOM(0, 10),
-    //     RANDOM(0, 10),
-    //     RANDOM(0, 10),
-    //     RANDOM(0, 10),
-    //     RANDOM(0, 10)
-    //   ]
-    //   const rdmColor = `rgb(${RANDOM(0, 255)},${RANDOM(0, 255)},${RANDOM(
-    //     0,
-    //     255
-    //   )})`
-    //   D3.selectAll("rect")
-    //     .data(newData)
-    //     .transition()
-    //     .attr("y", d => {
-    //       return this.yscale(d)
-    //     })
-    //     .attr("height", d => {
-    //       return this.svgH - 30 - this.yscale(d)
-    //     })
-    //     .attr("fill", rdmColor)
-    // }, 1500)
   },
   computed: {
     barWidth() {
@@ -145,4 +126,13 @@ export default {
 
 <style scoped lang="less">
 @import url(./Bar.less);
+</style>
+<style lang="less">
+.aaa {
+  background: #ed4014;
+}
+
+.bbb {
+  background: #008ced;
+}
 </style>
