@@ -203,12 +203,3 @@ export default {
 <style scoped lang="less">
 @import url(./Bar.less);
 </style>
-<style lang="less">
-.aaa {
-  background: #ed4014;
-}
-
-.bbb {
-  background: #008ced;
-}
-</style>

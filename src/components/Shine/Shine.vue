@@ -25,8 +25,7 @@ export default {
   background: #dadada;
   border: 5px solid red;
   animation: shine 1s alternate infinite;
-  left: 850px;
-  position: absolute;
+  float: left;
 }
 
 @keyframes shine {

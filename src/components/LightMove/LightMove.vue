@@ -1,6 +1,6 @@
 <template>
   <!-- 光影一闪而过 -->
-  <div class="blink-container"></div>
+  <div class="blink-container">DOM</div>
 </template>
 
 <script>
@@ -20,11 +20,12 @@ export default {
 
 <style lang="less" scoped>
 .blink-container {
-  position: absolute;
-  left: 600px;
+  position: relative;
+  float: left;
   overflow: hidden;
   height: 200px;
   width: 200px;
+  border: 4px solid #ed4014;
   background: orange;
   &:after {
     position: absolute;
