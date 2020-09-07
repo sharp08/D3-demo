@@ -128,6 +128,8 @@ export default {
         }
       })
 
+    this.handleDataChange()
+
     // 手动触发数据变化
     // D3.select("button").on("click", this.handleDataChange)
 
