@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Bar />
+    <Bar2 />
     <LightMove />
     <Shine />
     <SVGLinearFlow />
@@ -11,6 +12,7 @@
 
 <script>
 import Bar from "@/components/Bar"
+import Bar2 from "@/components/Bar2"
 import LightMove from "@/components/LightMove"
 import Shine from "@/components/Shine"
 import SVGLinearFlow from "@/components/SVGLinearFlow"
@@ -21,6 +23,7 @@ export default {
   name: "Home",
   components: {
     Bar,
+    Bar2,
     LightMove,
     Shine,
     SVGLinearFlow,
