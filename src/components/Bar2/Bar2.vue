@@ -1,11 +1,10 @@
 <template>
-  <div class="bar2-container">
+  <div class="bar2-container" title="Bar2">
     <ul>
       <li>x轴为离散型，y轴为连续型</li>
       <li>动态 x轴，柱状图宽度用 barWidth 自适应</li>
       <li>动态 y轴，动态 markline</li>
       <li>>10 明暗切换</li>
-      <li>5 < x <=10 水波特效</li>
     </ul>
     <button @click="handleDataChange">手动变化</button>
   </div>

@@ -1,6 +1,8 @@
 <template>
   <!-- 高亮 -->
-  <div class="shine"></div>
+  <div class="box" title="shine">
+    <div class="shine"></div>
+  </div>
 </template>
 
 <script>
@@ -19,21 +21,27 @@ export default {
 </script>
 
 <style scoped lang="less">
-.shine {
-  width: 100px;
-  height: 200px;
-  background: #dadada;
-  border: 5px solid red;
-  animation: shine 1s alternate infinite;
+.box {
+  border: 4px solid #ed4014;
+  padding: 10px;
   float: left;
-}
 
-@keyframes shine {
-  0% {
-    border-color: rgba(0, 0, 0, 0);
+  .shine {
+    width: 100px;
+    height: 200px;
+    background: #dadada;
+    border: 5px solid red;
+    animation: shine 1s alternate infinite;
+    float: left;
   }
-  100% {
-    border-color: rgba(0, 0, 0, 1);
+
+  @keyframes shine {
+    0% {
+      border-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      border-color: rgba(0, 0, 0, 1);
+    }
   }
 }
 </style>

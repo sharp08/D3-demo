@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" title="SVGViewBox">
     <span>关于 preserveAspectRatio，viewBox 的理解方式：</span>
     <ul>
       <li>先画一个 400*200 的画布，取名 A；</li>

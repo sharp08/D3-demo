@@ -1,5 +1,5 @@
 <template>
-  <div class="bar-container">
+  <div class="bar-container" title="Bar">
     <div>两个轴都为连续型</div>
     <button @click="handleDataChange">手动变化</button>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <!-- 渐变动画 -->
-  <div class="box">
+  <div class="box" title="SVGLinearFlow">
     <svg height="210" width="200">
       <defs>
         <!-- 静态 -->
@@ -83,8 +83,7 @@ export default {
 <style scoped lang="less">
 .box {
   float: left;
-  // width: 200px;
-  background: orange;
   padding: 10px;
+  border: 4px solid #ed4014;
 }
 </style>

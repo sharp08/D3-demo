@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" title="SVGHeartBeat">
     <!-- 心跳动画 -->
     <svg
       height="200"

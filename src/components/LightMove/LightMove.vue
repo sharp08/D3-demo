@@ -1,6 +1,6 @@
 <template>
   <!-- 光影一闪而过 -->
-  <div class="box">
+  <div class="box" title="LightMove">
     <div class="blink-container">DOM</div>
     <!-- SVG -->
     <svg height="200" width="200" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,10 @@ export default {
 
 <style lang="less" scoped>
 .box {
+  border: 4px solid #ed4014;
+  padding: 4px;
   float: left;
+
   .blink-container {
     position: relative;
     float: left;
