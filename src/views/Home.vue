@@ -9,6 +9,7 @@
     <SVGHeartBeat />
     <OutHidden />
     <StatusTransition />
+    <Drag />
   </div>
 </template>
 
@@ -22,6 +23,7 @@ import SVGViewBox from "@/components/SVGViewBox"
 import SVGHeartBeat from "@/components/SVGHeartBeat"
 import OutHidden from "@/components/OutHidden"
 import StatusTransition from "@/components/StatusTransition"
+import Drag from "@/components/Drag"
 
 export default {
   name: "Home",
@@ -34,7 +36,8 @@ export default {
     SVGViewBox,
     SVGHeartBeat,
     OutHidden,
-    StatusTransition
+    StatusTransition,
+    Drag
   },
   data() {
     return {}

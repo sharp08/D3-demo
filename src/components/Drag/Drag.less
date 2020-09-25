@@ -1,0 +1,24 @@
+.drag-container {
+  height: 300px;
+  width: 300px;
+  float: left;
+  position: relative;
+  border: @container-border;
+
+  .drag-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    background: @green;
+    overflow: hidden;
+
+    .handler {
+      height: 20px;
+      background: @blue;
+      cursor: grab;
+      margin: 10px;
+    }
+  }
+}
