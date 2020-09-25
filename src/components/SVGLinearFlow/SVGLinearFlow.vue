@@ -84,6 +84,6 @@ export default {
 .box {
   float: left;
   padding: 10px;
-  border: 4px solid #ed4014;
+  border: @container-border;
 }
 </style>

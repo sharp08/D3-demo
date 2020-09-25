@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="less">
 .box {
-  border: 4px solid #ed4014;
+  border: @container-border;
   float: left;
   padding: 10px;
 }

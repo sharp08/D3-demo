@@ -3,10 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import * as D3 from "d3"
-import { RANDOM } from '@pingzi_1227/tool-box'
+import MyPlugin from '@/assets/MyPlugin'
 
-window.RANDOM = RANDOM
 window.D3 = D3
+
+Vue.use(MyPlugin)
 
 Vue.config.productionTip = false
 

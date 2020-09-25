@@ -1,0 +1,45 @@
+.out-hidden-container {
+  position: relative;
+  float: left;
+  height: 240px;
+  width: 300px;
+  border: @container-border;
+
+  .like-pop {
+    height: 200px;
+    width: 200px;
+    background: @orange;
+    padding: 10px;
+
+    .line {
+      background: @blue;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      color: @white;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .label {
+        margin-right: 10px;
+        background: @green;
+        padding: 4px
+      }
+
+      .value {
+        margin-right: 10px;
+        background: @red;
+        padding: 4px
+      }
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

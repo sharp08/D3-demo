@@ -22,7 +22,7 @@ export default {
 
 <style scoped lang="less">
 .box {
-  border: 4px solid #ed4014;
+  border: @container-border;
   padding: 10px;
   float: left;
 

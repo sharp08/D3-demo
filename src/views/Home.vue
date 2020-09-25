@@ -7,6 +7,8 @@
     <SVGLinearFlow />
     <SVGViewBox />
     <SVGHeartBeat />
+    <OutHidden />
+    <StatusTransition />
   </div>
 </template>
 
@@ -18,6 +20,8 @@ import Shine from "@/components/Shine"
 import SVGLinearFlow from "@/components/SVGLinearFlow"
 import SVGViewBox from "@/components/SVGViewBox"
 import SVGHeartBeat from "@/components/SVGHeartBeat"
+import OutHidden from "@/components/OutHidden"
+import StatusTransition from "@/components/StatusTransition"
 
 export default {
   name: "Home",
@@ -28,7 +32,9 @@ export default {
     Shine,
     SVGLinearFlow,
     SVGViewBox,
-    SVGHeartBeat
+    SVGHeartBeat,
+    OutHidden,
+    StatusTransition
   },
   data() {
     return {}
