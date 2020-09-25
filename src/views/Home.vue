@@ -10,6 +10,7 @@
     <OutHidden />
     <StatusTransition />
     <Drag />
+    <AnimateCSS />
   </div>
 </template>
 
@@ -24,6 +25,7 @@ import SVGHeartBeat from "@/components/SVGHeartBeat"
 import OutHidden from "@/components/OutHidden"
 import StatusTransition from "@/components/StatusTransition"
 import Drag from "@/components/Drag"
+import AnimateCSS from "@/components/AnimateCSS"
 
 export default {
   name: "Home",
@@ -37,7 +39,8 @@ export default {
     SVGHeartBeat,
     OutHidden,
     StatusTransition,
-    Drag
+    Drag,
+    AnimateCSS
   },
   data() {
     return {}

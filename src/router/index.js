@@ -8,7 +8,19 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: "",
+        name: "ComA",
+        component: () => import(/* webpackChunkName: "ComA" */ '../components/AnimateCSS/components/ComA')
+      },
+      {
+        path: "ComB",
+        name: "ComB",
+        component: () => import(/* webpackChunkName: "ComB" */ '../components/AnimateCSS/components/ComB')
+      }
+    ],
   },
   {
     path: '/about',

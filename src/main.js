@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import * as D3 from "d3"
 import MyPlugin from '@/assets/MyPlugin'
+import 'animate.css'
 
 window.D3 = D3
 
