@@ -4,6 +4,7 @@
     <div class="drag-block" ref="drag-block">
       <div class="handler" ref="handler"></div>
     </div>
+    <button @click="handleCenter">居中</button>
   </div>
 </template>
 
@@ -53,7 +54,16 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    // 此处想实现手动居中不能使用 transform，否则居中后再拖拽会有问题
+    handleCenter() {
+      const clientWidth = this.$refs["drag-block"].clientWidth
+      const clientHeight = this.$refs["drag-block"].clientHeight
+
+      this.$refs["drag-block"].style.left = `calc(50% - ${clientWidth / 2}px)`
+      this.$refs["drag-block"].style.top = `calc(100px - ${clientHeight / 2}px)`
+    }
+  }
 }
 </script>
 
