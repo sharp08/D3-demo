@@ -11,6 +11,7 @@
     <StatusTransition />
     <Drag />
     <AnimateCSS />
+    <ModalDemo />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import OutHidden from "@/components/OutHidden"
 import StatusTransition from "@/components/StatusTransition"
 import Drag from "@/components/Drag"
 import AnimateCSS from "@/components/AnimateCSS"
+import ModalDemo from "@/components/ModalDemo"
 
 export default {
   name: "Home",
@@ -40,7 +42,8 @@ export default {
     OutHidden,
     StatusTransition,
     Drag,
-    AnimateCSS
+    AnimateCSS,
+    ModalDemo
   },
   data() {
     return {}
