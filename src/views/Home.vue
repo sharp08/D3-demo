@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Bar />
+    <!-- <Bar />
     <Bar2 />
     <LightMove />
     <Shine />
@@ -10,7 +10,7 @@
     <OutHidden />
     <StatusTransition />
     <Drag />
-    <AnimateCSS />
+    <AnimateCSS />-->
     <ModalDemo />
   </div>
 </template>
@@ -48,6 +48,7 @@ export default {
   data() {
     return {}
   },
+  mounted() {},
   methods: {}
 }
 </script>

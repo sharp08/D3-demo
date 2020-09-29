@@ -1,37 +1,51 @@
 <template>
   <div class="modal-demo-container">
     <button @click="handleShow">创建窗口</button>
+    <button @click="handleShow2">显示窗口</button>
+    <button @click="handleHide">隐藏窗口</button>
     <button @click="handleDestory">销毁窗口</button>
     <button @click="handleDestoryAll">销毁全部</button>
   </div>
 </template>
 
 <script>
-import StatusTransition from "@/components/StatusTransition"
-
 export default {
   name: "ModalDemo",
   components: {},
   props: {},
   data() {
-    return {}
+    return {
+      n: 0
+    }
   },
   mounted() {},
   computed: {},
   watch: {},
   methods: {
     handleShow() {
+      this.n = this.n + 1
+      const z = this.n + ""
       this.$BaseWin.show({
-        // top: StatusTransition
-        render: h => {
-          return [
-            // h(StatusTransition, {
-            //   slot: "main",
-            //   style: { position: "fixed", zIndex: 1000 }
-            // })
-          ]
-        }
+        key: z,
+        render: h => []
+        // render: h => {
+        //   return [
+        //     h(
+        //       "div",
+        //       {
+        //         slot: "top"
+        //       },
+        //       z.repeat(z)
+        //     )
+        //   ]
+        // }
       })
+    },
+    handleShow2() {
+      this.$BaseWin.show("1")
+    },
+    handleHide() {
+      this.$BaseWin.hide()
     },
     handleDestory() {
       this.$BaseWin.destory()
