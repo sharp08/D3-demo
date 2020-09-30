@@ -7,7 +7,7 @@
     <!-- 主内容区 -->
     <div :style="positionStyle" class="main" ref="main">
       <slot name="top">
-        <div class="top">top</div>
+        <div class="top" ref="top">top</div>
       </slot>
       <slot name="mid">
         <div class="mid">mid</div>
@@ -15,7 +15,7 @@
       <slot name="btm">
         <div class="btm">
           <button @click="handleVisible">确认</button>
-          <button @click="visible=false">关闭</button>
+          <button @click="test">关闭</button>
         </div>
       </slot>
     </div>
@@ -61,6 +61,42 @@ export default {
       }
     })
     this.ro.observe(this.$refs["main"])
+
+    // 绑定拖拽
+    const moveElement = this.$refs["main"] //  拖拽运动的元素
+    const dragElement = this.$refs["main"] //  拖拽的把手
+
+    dragElement.onmousedown = e => {
+      const x = moveElement.offsetLeft - e.clientX
+      const y = moveElement.offsetTop - e.clientY
+      dragElement.style.cursor = "grabbing"
+
+      document.onmousemove = e => {
+        document.body.style.cursor = "grabbing"
+        // 限制拖拽范围
+        let h = e.clientX + x
+        // if (h > 192) {
+        //   h = 192
+        // } else if (h < 0) {
+        //   h = 0
+        // }
+
+        let v = e.clientY + y
+        // if (v > 192) {
+        //   v = 192
+        // } else if (v < 0) {
+        //   v = 0
+        // }
+        moveElement.style.left = h + "px"
+        moveElement.style.top = v + "px"
+      }
+      document.onmouseup = e => {
+        document.body.style.cursor = null
+        dragElement.style.cursor = "grab"
+        document.onmousemove = null
+        document.onmouseup = null
+      }
+    }
   },
   beforeDestroy() {
     this.ro.disconnect()
@@ -91,6 +127,9 @@ export default {
     },
     handleVisible(bool) {
       console.log(bool)
+    },
+    test(){
+      this.$BaseWin.hide(this.key)
     }
   }
 }

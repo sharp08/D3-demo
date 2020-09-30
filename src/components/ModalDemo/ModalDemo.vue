@@ -18,7 +18,9 @@ export default {
       n: 0
     }
   },
-  mounted() {},
+  mounted() {
+    // todo 这里有个问题，如果在组件内的显示，隐藏，销毁的行为会导致 instanceList 和 visibleInstances 的列表无法及时更新，需要考虑
+  },
   computed: {},
   watch: {},
   methods: {
@@ -27,18 +29,18 @@ export default {
       const z = this.n + ""
       this.$BaseWin.show({
         key: z,
-        render: h => []
-        // render: h => {
-        //   return [
-        //     h(
-        //       "div",
-        //       {
-        //         slot: "top"
-        //       },
-        //       z.repeat(z)
-        //     )
-        //   ]
-        // }
+        // render: h => []
+        render: h => {
+          return [
+            h(
+              "div",
+              {
+                slot: "top"
+              },
+              z.repeat(z)
+            )
+          ]
+        }
       })
     },
     handleShow2() {

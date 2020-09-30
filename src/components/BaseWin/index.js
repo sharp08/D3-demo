@@ -22,7 +22,7 @@ const rtn = {
       }
     }
     // 创建
-    else {
+    else if (Object.prototype.toString.call(o) === "[object Object]") {
       const instance = new Vue({
         render: h => h(BaseWin, o.render(h)),
       })
@@ -41,6 +41,10 @@ const rtn = {
         key: o.key,
         instance
       })
+    }
+    // 参数必须传
+    else {
+      console.warn("参数必须为 string 或 object")
     }
   },
   // 隐藏窗口，传 key 则隐藏 key 窗口，不传则隐藏最后一个弹出的窗口
