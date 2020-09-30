@@ -10,8 +10,9 @@
     <OutHidden />
     <StatusTransition />
     <Drag />
-    <AnimateCSS />-->
-    <ModalDemo />
+    <AnimateCSS />
+    <ModalDemo /> -->
+    <ResizableElementDemo />
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import StatusTransition from "@/components/StatusTransition"
 import Drag from "@/components/Drag"
 import AnimateCSS from "@/components/AnimateCSS"
 import ModalDemo from "@/components/ModalDemo"
+import ResizableElementDemo from "@/components/ResizableElementDemo"
 
 export default {
   name: "Home",
@@ -43,7 +45,8 @@ export default {
     StatusTransition,
     Drag,
     AnimateCSS,
-    ModalDemo
+    ModalDemo,
+    ResizableElementDemo
   },
   data() {
     return {}
