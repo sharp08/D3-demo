@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <!-- <Bar />
-    <Bar2 />
-    <LightMove />
-    <Shine />
-    <SVGLinearFlow />
-    <SVGViewBox />
-    <SVGHeartBeat />
-    <OutHidden />
-    <StatusTransition />
+    <!-- <Bar /> -->
+    <!-- <Bar2 /> -->
+    <!-- <LightMove /> -->
+    <!-- <Shine /> -->
+    <!-- <SVGLinearFlow /> -->
+    <!-- <SVGViewBox /> -->
+    <!-- <SVGHeartBeat /> -->
+    <!-- <OutHidden /> -->
+    <!-- <StatusTransition /> -->
     <Drag />
-    <AnimateCSS />
-    <ModalDemo /> -->
-    <ResizableElementDemo />
+    <!-- <AnimateCSS /> -->
+    <!-- <ModalDemo /> -->
+    <!-- <ResizableElementDemo /> -->
   </div>
 </template>
 

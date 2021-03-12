@@ -20,6 +20,7 @@ export default {
     const moveElement = this.$refs["drag-block"] //  拖拽运动的元素
     const dragElement = this.$refs["handler"] //  拖拽的把手
 
+    // offset 版
     dragElement.onmousedown = e => {
       const x = moveElement.offsetLeft - e.clientX
       const y = moveElement.offsetTop - e.clientY
@@ -51,6 +52,27 @@ export default {
         document.onmouseup = null
       }
     }
+
+    // transform 版
+    // dragElement.onmousedown = e => {
+    //   const x = e.clientX
+    //   const y = e.clientY
+    //   dragElement.style.cursor = "grabbing"
+    //   const arr = moveElement.style.transform.match(/\d+/g) || [0, 0]
+
+    //   document.onmousemove = e => {
+    //     document.body.style.cursor = "grabbing"
+    //     let xAxis = e.clientX - x + Number(arr[0])
+    //     let yAxis = e.clientY - y + Number(arr[1])
+    //     moveElement.style.transform = `translate(${xAxis}px,${yAxis}px)`
+    //   }
+    //   document.onmouseup = e => {
+    //     document.body.style.cursor = null
+    //     dragElement.style.cursor = "grab"
+    //     document.onmousemove = null
+    //     document.onmouseup = null
+    //   }
+    // }
   },
   computed: {},
   watch: {},
