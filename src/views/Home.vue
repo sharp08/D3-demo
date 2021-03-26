@@ -9,44 +9,60 @@
     <!-- <SVGHeartBeat /> -->
     <!-- <OutHidden /> -->
     <!-- <StatusTransition /> -->
-    <Drag />
+    <!-- <Drag /> -->
     <!-- <AnimateCSS /> -->
     <!-- <ModalDemo /> -->
     <!-- <ResizableElementDemo /> -->
+    <CubeDemo />
+    <TriangleDemo />
+    <!-- <ScrollCountDemo /> -->
   </div>
 </template>
 
 <script>
-import Bar from "@/components/Bar"
-import Bar2 from "@/components/Bar2"
-import LightMove from "@/components/LightMove"
-import Shine from "@/components/Shine"
-import SVGLinearFlow from "@/components/SVGLinearFlow"
-import SVGViewBox from "@/components/SVGViewBox"
-import SVGHeartBeat from "@/components/SVGHeartBeat"
-import OutHidden from "@/components/OutHidden"
-import StatusTransition from "@/components/StatusTransition"
-import Drag from "@/components/Drag"
-import AnimateCSS from "@/components/AnimateCSS"
-import ModalDemo from "@/components/ModalDemo"
-import ResizableElementDemo from "@/components/ResizableElementDemo"
-
 export default {
   name: "Home",
   components: {
-    Bar,
-    Bar2,
-    LightMove,
-    Shine,
-    SVGLinearFlow,
-    SVGViewBox,
-    SVGHeartBeat,
-    OutHidden,
-    StatusTransition,
-    Drag,
-    AnimateCSS,
-    ModalDemo,
-    ResizableElementDemo
+    Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
+    Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
+    LightMove: () =>
+      import(/* webpackChunkName: "LightMove" */ "@/components/LightMove"),
+    Shine: () => import(/* webpackChunkName: "Shine" */ "@/components/Shine"),
+    SVGLinearFlow: () =>
+      import(
+        /* webpackChunkName: "SVGLinearFlow" */ "@/components/SVGLinearFlow"
+      ),
+    SVGViewBox: () =>
+      import(/* webpackChunkName: "SVGViewBox" */ "@/components/SVGViewBox"),
+    SVGHeartBeat: () =>
+      import(
+        /* webpackChunkName: "SVGHeartBeat" */ "@/components/SVGHeartBeat"
+      ),
+    OutHidden: () =>
+      import(/* webpackChunkName: "OutHidden" */ "@/components/OutHidden"),
+    StatusTransition: () =>
+      import(
+        /* webpackChunkName: "StatusTransition" */ "@/components/StatusTransition"
+      ),
+    Drag: () => import(/* webpackChunkName: "Drag" */ "@/components/Drag"),
+    AnimateCSS: () =>
+      import(/* webpackChunkName: "AnimateCSS" */ "@/components/AnimateCSS"),
+    ModalDemo: () =>
+      import(/* webpackChunkName: "ModalDemo" */ "@/components/ModalDemo"),
+    ResizableElementDemo: () =>
+      import(
+        /* webpackChunkName: "ResizableElementDemo" */ "@/components/ResizableElementDemo"
+      ),
+    CubeDemo: () =>
+      import(/* webpackChunkName: "CubeDemo" */ "@/components/CubeDemo"),
+    TriangleDemo: () =>
+      import(
+        /* webpackChunkName: "TriangleDemo" */ "@/components/TriangleDemo"
+      ),
+    ScrollCountDemo: () =>
+      import(
+        /* webpackChunkName: "ScrollCountDemo" */ "@/components/ScrollCountDemo"
+      )
   },
   data() {
     return {}

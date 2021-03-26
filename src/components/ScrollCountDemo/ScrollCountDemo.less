@@ -1,0 +1,18 @@
+.scroll-count-demo {
+  height: 300px;
+  width: 300px;
+  border: @container-border;
+  float: left;
+  position: relative;
+  overflow: hidden;
+
+  .demo-container {
+    display: flex;
+
+    // 不要给 ScrollCount 的样式添加 padding
+    .singleNum {
+      height: 40px;
+      width: 50px;
+    }
+  }
+}
