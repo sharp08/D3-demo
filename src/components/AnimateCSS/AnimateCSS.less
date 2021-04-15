@@ -1,25 +1,9 @@
 .animate-css-container {
-  height: 100px;
-  width: 200px;
-  float: left;
-  border: @container-border;
-  position: relative;
+  .animate__animated {
 
-  .custom {
-    float: left;
-    font-size: 40px;
-    background: @green;
-    padding: 10px;
-  }
-
-  .btn1 {
-    position: absolute;
-    right: 0;
-  }
-
-  .btn2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    &.animate__rollIn,
+    &.animate__rollOut {
+      animation-duration: 2s;
+    }
   }
 }

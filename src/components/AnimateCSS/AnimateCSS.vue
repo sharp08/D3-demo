@@ -64,5 +64,8 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import url(./ScopedAnimateCSS);
+</style>
+<style  lang="less">
 @import url(./AnimateCSS);
 </style>

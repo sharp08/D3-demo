@@ -15,6 +15,7 @@ export default {
   name: "ScrollCount",
   props: {
     showNum: {
+      type: Number,
       default: 0
     }
   },

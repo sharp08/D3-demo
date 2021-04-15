@@ -13,8 +13,8 @@
     <!-- <AnimateCSS /> -->
     <!-- <ModalDemo /> -->
     <!-- <ResizableElementDemo /> -->
-    <CubeDemo />
-    <TriangleDemo />
+    <!-- <CubeDemo /> -->
+    <!-- <PyramidDemo /> -->
     <!-- <ScrollCountDemo /> -->
   </div>
 </template>
@@ -55,10 +55,8 @@ export default {
       ),
     CubeDemo: () =>
       import(/* webpackChunkName: "CubeDemo" */ "@/components/CubeDemo"),
-    TriangleDemo: () =>
-      import(
-        /* webpackChunkName: "TriangleDemo" */ "@/components/TriangleDemo"
-      ),
+    PyramidDemo: () =>
+      import(/* webpackChunkName: "PyramidDemo" */ "@/components/PyramidDemo"),
     ScrollCountDemo: () =>
       import(
         /* webpackChunkName: "ScrollCountDemo" */ "@/components/ScrollCountDemo"

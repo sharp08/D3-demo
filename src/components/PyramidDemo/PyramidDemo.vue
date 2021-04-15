@@ -1,5 +1,5 @@
 <template>
-  <div class="triangle-demo">
+  <div class="pyramid-demo">
     <Triangle />
   </div>
 </template>
@@ -8,7 +8,7 @@
 import Triangle from "./components/Triangle"
 
 export default {
-  name: "TriangleDemo",
+  name: "PyramidDemo",
   components: {
     Triangle
   },
@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import url(./TriangleDemo.less);
+@import url(./PyramidDemo.less);
 </style>
