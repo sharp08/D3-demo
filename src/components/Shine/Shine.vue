@@ -22,9 +22,9 @@ export default {
 
 <style scoped lang="less">
 .box {
-  border: @container-border;
+  .generalContainer;
+  .globalCenter;
   padding: 10px;
-  float: left;
 
   .shine {
     width: 100px;

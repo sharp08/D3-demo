@@ -33,7 +33,12 @@ export default {
       return list
     }
   },
-  mounted() {},
+  mounted() {
+    this.handleChange()
+    this.timer = setInterval(() => {
+      this.handleChange()
+    }, 2000)
+  },
   methods: {
     handleChange() {
       this.rdm = RANDOM(0, 999)

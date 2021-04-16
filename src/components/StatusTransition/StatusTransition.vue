@@ -1,6 +1,6 @@
 <template>
   <div class="status-transition-container" title="StatusTransition">
-    <button @click="handle">数字过渡</button>
+    <button @click="handleChange">数字过渡</button>
     <GsapSpan :value="value" />
   </div>
 </template>
@@ -21,11 +21,16 @@ export default {
       value: 0
     }
   },
-  mounted() {},
+  mounted() {
+    clearInterval(this.timer)
+    this.timer = setInterval(() => {
+      this.handleChange()
+    }, 2000)
+  },
   computed: {},
   watch: {},
   methods: {
-    handle() {
+    handleChange() {
       this.value = RANDOM(0, 100, 2)
     }
   }

@@ -3,7 +3,7 @@
   <div class="box" title="LightMove">
     <div class="blink-container">DOM</div>
     <!-- SVG -->
-    <svg height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+    <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="svg_6" x1="0" x2="1" y1="0" y2="1">
           <stop offset="-1" stop-color="#ffffff">
@@ -27,17 +27,17 @@
         <title>Layer 1</title>
         <rect
           fill="url(#svg_6)"
-          height="200"
           id="svg_5"
           stroke="#d3d0c9"
           stroke-linecap="null"
           stroke-linejoin="null"
           stroke-opacity="0.8"
           stroke-width="5"
-          width="200"
+          height="100"
+          width="100"
         />
       </g>
-      <text fill="#ff9900" font-size="80" stroke="blue" stroke-width="4" x="100" y="100">SVG</text>
+      <text fill="#ff9900" font-size="40" stroke="blue" stroke-width="4" x="50" y="50">SVG</text>
     </svg>
   </div>
 </template>
@@ -59,21 +59,20 @@ export default {
 
 <style lang="less" scoped>
 .box {
-  border: @container-border;
+  .generalContainer;
   padding: 4px;
-  float: left;
 
   .blink-container {
     position: relative;
     float: left;
     overflow: hidden;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     border: @container-border;
     background: orange;
     text-align: center;
-    line-height: 200px;
-    font-size: 80px;
+    line-height: 100px;
+    font-size: 40px;
     color: #008cee;
     &:after {
       position: absolute;

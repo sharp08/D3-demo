@@ -1,0 +1,29 @@
+@keyframes xRotate {
+  0% {
+    transform: rotateX(0)
+  }
+
+  100% {
+    transform: rotateX(360deg)
+  }
+}
+
+.flip-demo {
+  .generalContainer;
+  .globalCenter;
+
+  .card {
+    height: 100px;
+    width: 80px;
+    background: red;
+    .globalCenter;
+    font-size: 46px;
+    font-weight: bold;
+    color: #fff;
+
+    &.flip {
+      animation: xRotate 1s;
+    }
+  }
+
+}

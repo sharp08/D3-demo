@@ -5,7 +5,7 @@
       height="200"
       preserveAspectRatio="xMinYMin meet"
       style="border:1px solid #cd0000;"
-      width="400"
+      width="200"
     >
       <rect fill="#cd0000" height="80" width="80" x="40" y="40">
         <animateTransform
@@ -58,8 +58,7 @@ export default {
 
 <style scoped lang="less">
 .box {
-  float: left;
-  border: @container-border;
+  .generalContainer;
   padding: 10px;
 }
 </style>

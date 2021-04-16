@@ -1,0 +1,68 @@
+.scroll-list-demo {
+  ::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 3px;
+    /*定义纵向滚动条宽度*/
+    height: 8px;
+    /*定义横向滚动条高度*/
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /*滚动条内部滑块*/
+    border-radius: 8px;
+    // background-color: hsla(220, 4%, 58%, 0.8);
+    background-color: rgba(255, 0, 0, 1);
+    transition: background-color 0.3s;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /*鼠标悬停滚动条内部滑块*/
+    background: #bbb;
+  }
+
+  ::-webkit-scrollbar-track {
+    /*滚动条内部轨道*/
+    background: #0e42b7;
+  }
+
+  .generalContainer;
+  padding: 4px;
+
+  .like-table {
+    border: 4px solid orange;
+    color: red;
+
+    .th {
+      .tr {
+        display: flex;
+        text-align: center;
+
+        .td {
+          width: 25%;
+          padding: 0 10px;
+          .overDot;
+        }
+      }
+    }
+
+    .tb {
+      height: 120px;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .tr {
+        display: flex;
+        text-align: center;
+        color: #008cee;
+        height: 30px;
+        line-height: 30px;
+
+        .td {
+          width: 25%;
+          padding: 0 10px;
+          .overDot;
+        }
+      }
+    }
+  }
+}

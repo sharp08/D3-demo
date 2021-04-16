@@ -5,6 +5,30 @@
 @blue: #008cee;
 @green: #19be6b;
 // 字体
-@impact: impact;  //  fonts 文件夹
+@impact: impact; //  fonts 文件夹
 // 样式
 @container-border: 4px solid @red;
+
+// 水平垂直居中
+.globalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 溢出...
+.overDot {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 通用的容器样式
+.generalContainer {
+  height: 300px;
+  width: 300px;
+  border: @container-border;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}

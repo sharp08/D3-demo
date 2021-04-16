@@ -2,20 +2,24 @@
   <div class="home">
     <!-- <Bar /> -->
     <!-- <Bar2 /> -->
-    <!-- <LightMove /> -->
-    <!-- <Shine /> -->
-    <!-- <SVGLinearFlow /> -->
     <!-- <SVGViewBox /> -->
-    <!-- <SVGHeartBeat /> -->
-    <!-- <OutHidden /> -->
-    <!-- <StatusTransition /> -->
-    <!-- <Drag /> -->
-    <!-- <AnimateCSS /> -->
     <!-- <ModalDemo /> -->
-    <!-- <ResizableElementDemo /> -->
-    <!-- <CubeDemo /> -->
-    <!-- <PyramidDemo /> -->
-    <!-- <ScrollCountDemo /> -->
+    <!-- 以下为标准尺寸 demo -->
+    <LightMove />
+    <Shine />
+    <SVGLinearFlow />
+    <SVGHeartBeat />
+    <OutHidden />
+    <StatusTransition />
+    <Drag />
+    <AnimateCSS />
+    <ResizableElementDemo />
+    <CubeDemo />
+    <PyramidDemo />
+    <ScrollCountDemo />
+    <LinearGradientDemo />
+    <ScrollList />
+    <FlipDemo />
   </div>
 </template>
 
@@ -60,7 +64,15 @@ export default {
     ScrollCountDemo: () =>
       import(
         /* webpackChunkName: "ScrollCountDemo" */ "@/components/ScrollCountDemo"
-      )
+      ),
+    LinearGradientDemo: () =>
+      import(
+        /* webpackChunkName: "LinearGradientDemo" */ "@/components/LinearGradientDemo"
+      ),
+    ScrollList: () =>
+      import(/* webpackChunkName: "ScrollList" */ "@/components/ScrollList"),
+    FlipDemo: () =>
+      import(/* webpackChunkName: "FlipDemo" */ "@/components/FlipDemo")
   },
   data() {
     return {}
