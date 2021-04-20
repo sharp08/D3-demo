@@ -1,0 +1,29 @@
+@keyframes xTrans {
+  0% {
+    transform: translateX(-480px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.animate-queue {
+  .generalContainer;
+
+  .line {
+    background: orange;
+    margin: 10px 10px 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+  }
+
+  .animate {
+    animation: xTrans 1s ease-out;
+    display: block;
+  }
+}

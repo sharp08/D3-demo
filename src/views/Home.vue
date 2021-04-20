@@ -5,6 +5,7 @@
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
     <!-- 以下为标准尺寸 demo -->
+    <AnimateQueue />
     <LightMove />
     <Shine />
     <SVGLinearFlow />
@@ -29,6 +30,10 @@ export default {
   components: {
     Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
+    AnimateQueue: () =>
+      import(
+        /* webpackChunkName: "AnimateQueue" */ "@/components/AnimateQueue"
+      ),
     LightMove: () =>
       import(/* webpackChunkName: "LightMove" */ "@/components/LightMove"),
     Shine: () => import(/* webpackChunkName: "Shine" */ "@/components/Shine"),

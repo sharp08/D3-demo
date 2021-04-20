@@ -16,11 +16,7 @@ export default {
     }
   },
   mounted() {
-    clearInterval(this.timer)
-    this.timer = setInterval(() => {
-      this.value = new Date().getSeconds()
-      this.play()
-    }, 2000)
+    this.trigger()
   },
   computed: {},
   watch: {},
@@ -32,6 +28,13 @@ export default {
           this.$refs["card"].className = "card flip"
         })
       })
+    },
+    trigger() {
+      clearInterval(this.timer)
+      this.timer = setInterval(() => {
+        this.value = new Date().getSeconds()
+        this.play()
+      }, 2000)
     }
   }
 }
