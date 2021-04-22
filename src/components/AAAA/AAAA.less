@@ -1,0 +1,34 @@
+@keyframes maskRotate {
+  // @for $i from 0 through 100 {
+  //   #{$i}% {
+  //     mask: linear-gradient(45deg, #000 #{$i + '%'}, transparent #{$i + 5 + '%'}, transparent 1%);
+  //   }
+  // }
+}
+
+
+.AAAA {
+  .generalContainer;
+
+  .bg-container {
+    position: relative;
+    height: ~`vw1920(100) `;
+    width: ~`vw1920(200) `;
+    background-image: url(../../assets/imgs/奥尔森1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(../../assets/imgs/奥尔森2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      animation: maskRotate 1.2s ease-in-out;
+    }
+  }
+}

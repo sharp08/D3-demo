@@ -4,23 +4,24 @@
     <!-- <Bar2 /> -->
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
-    <!-- 以下为标准尺寸 demo -->
-    <AnimateQueue />
-    <LightMove />
-    <Shine />
-    <SVGLinearFlow />
-    <SVGHeartBeat />
-    <OutHidden />
-    <StatusTransition />
-    <Drag />
-    <AnimateCSS />
-    <ResizableElementDemo />
-    <CubeDemo />
-    <PyramidDemo />
-    <ScrollCountDemo />
-    <LinearGradientDemo />
-    <ScrollList />
-    <FlipDemo />
+    <!-- ************ 以下为标准尺寸 demo ************ -->
+    <AAAA />
+    <!-- <AnimateQueue /> -->
+    <!-- <LightMove /> -->
+    <!-- <Shine /> -->
+    <!-- <SVGLinearFlow /> -->
+    <!-- <SVGHeartBeat /> -->
+    <!-- <OutHidden /> -->
+    <!-- <StatusTransition /> -->
+    <!-- <Drag /> -->
+    <!-- <AnimateCSS /> -->
+    <!-- <ResizableElementDemo /> -->
+    <!-- <CubeDemo /> -->
+    <!-- <PyramidDemo /> -->
+    <!-- <ScrollCountDemo /> -->
+    <!-- <LinearGradientDemo /> -->
+    <!-- <ScrollList /> -->
+    <!-- <FlipDemo /> -->
   </div>
 </template>
 
@@ -30,6 +31,7 @@ export default {
   components: {
     Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
+    AAAA: () => import(/* webpackChunkName: "AAAA" */ "@/components/AAAA"),
     AnimateQueue: () =>
       import(
         /* webpackChunkName: "AnimateQueue" */ "@/components/AnimateQueue"

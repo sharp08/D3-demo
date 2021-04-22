@@ -32,3 +32,17 @@
   position: relative;
   overflow: hidden;
 }
+
+// 动态样式
+.injectLessFn() {
+  @functions: ~`(function() {
+      this.vw1920=size=>size * 100 / 1920 + 'vw'
+      this.vw2560=size=>size * 100 / 2560 + 'vw'
+
+      this.vh1080=size=>size * 100 / 1080 + 'vh'
+    }
+
+  )()`;
+}
+
+.injectLessFn();
