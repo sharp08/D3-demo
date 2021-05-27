@@ -1,5 +1,5 @@
 <template>
-  <div class="AAAA">
+  <div class="colorful-circle-demo">
     <div class="circle">
       <div class="inner-circle"></div>
       <div class="common t1"></div>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "AAAA",
+  name: "ColorfulCircleDemo",
   components: {},
   props: {},
   data() {
@@ -28,5 +28,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import url(./AAAA.less);
+@import url(./ColorfulCircleDemo.less);
 </style>

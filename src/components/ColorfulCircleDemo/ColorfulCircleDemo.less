@@ -1,8 +1,19 @@
-.AAAA {
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.colorful-circle-demo {
   .generalContainer;
   .globalCenter;
 
   .circle {
+    animation: rotate 4s infinite ease-in-out;
     /*宽高50块元素*/
     width: 200px;
     height: 200px;

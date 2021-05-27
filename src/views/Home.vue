@@ -6,6 +6,7 @@
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
     <AAAA />
+    <ColorfulCircleDemo />
     <!-- <AnimateQueue /> -->
     <!-- <LightMove /> -->
     <!-- <Shine /> -->
@@ -32,6 +33,10 @@ export default {
     Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
     AAAA: () => import(/* webpackChunkName: "AAAA" */ "@/components/AAAA"),
+    ColorfulCircleDemo: () =>
+      import(
+        /* webpackChunkName: "ColorfulCircleDemo" */ "@/components/ColorfulCircleDemo"
+      ),
     AnimateQueue: () =>
       import(
         /* webpackChunkName: "AnimateQueue" */ "@/components/AnimateQueue"
