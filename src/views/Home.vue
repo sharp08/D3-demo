@@ -6,7 +6,7 @@
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
     <AAAA />
-    <ColorfulCircleDemo />
+    <!-- <ColorfulCircleDemo /> -->
     <!-- <AnimateQueue /> -->
     <!-- <LightMove /> -->
     <!-- <Shine /> -->

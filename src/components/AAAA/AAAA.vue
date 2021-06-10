@@ -1,13 +1,9 @@
 <template>
   <div class="AAAA">
     <div class="circle">
-      <div class="inner-circle"></div>
-      <div class="common t1"></div>
-      <div class="common t2"></div>
-      <div class="common t3"></div>
-      <div class="common t4"></div>
-      <div class="common t5"></div>
-      <div class="common t6"></div>
+      <div :style="handleCalBarStyle(item,idx)" class="bar" ref="bar" v-for="(item,idx) in list">
+        <div :style="handleCalCircleStyle(item,idx)" class="inner-circle">{{item}}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,15 +11,25 @@
 <script>
 export default {
   name: "AAAA",
-  components: {},
-  props: {},
   data() {
-    return {}
+    return {
+      list: ["a", "b", "c", "d", "e"]
+    }
   },
-  mounted() {},
-  computed: {},
-  watch: {},
-  methods: {}
+  methods: {
+    handleCalBarStyle(item, idx) {
+      let angle = 360 / this.list.length
+      return {
+        transform: `rotate(${angle * idx}deg)`
+      }
+    },
+    handleCalCircleStyle(item, idx) {
+      let angle = 360 / this.list.length
+      return {
+        transform: `rotate(-${angle * idx}deg)`
+      }
+    }
+  }
 }
 </script>
 

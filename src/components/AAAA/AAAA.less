@@ -3,66 +3,30 @@
   .globalCenter;
 
   .circle {
-    /*宽高50块元素*/
     width: 200px;
     height: 200px;
-    background: #fff;
+    background: pink;
     border-radius: 50%;
     position: relative;
-    overflow: hidden;
 
-    .inner-circle {
-      width: 150px;
-      height: 150px;
-      background: #fff;
-      border-radius: 50%;
+    .bar {
+      height: 100px;
+      width: 30px;
+      background: red;
       position: absolute;
-      z-index: 1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .common {
-      position: absolute;
-      border-left: 40px solid transparent;
-      border-right: 40px solid transparent;
-      border-bottom: 0px solid transparent;
-      left: calc(50% - 40px);
+      top: 0;
+      left: 85px;
       transform-origin: bottom center;
 
-      &.t1 {
-        transform: rotate(0deg);
-        border-top: 100px solid pink;
-      }
-
-      &.t2 {
-        transform: rotate(60deg);
-        border-top: 100px solid orange;
-      }
-
-      &.t3 {
-        transform: rotate(120deg);
-        border-top: 100px solid blueviolet;
-      }
-
-      &.t4 {
-        transform: rotate(180deg);
-        border-top: 100px solid lightseagreen;
-      }
-
-      &.t5 {
-        transform: rotate(240deg);
-        border-top: 100px solid lightsalmon;
-      }
-
-      &.t6 {
-        transform: rotate(300deg);
-        border-top: 100px solid gray;
+      .inner-circle {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: orange;
+        top: 0;
+        .globalCenter;
       }
     }
   }
-
-
-
 }
