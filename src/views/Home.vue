@@ -5,7 +5,8 @@
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
-    <AAAA />
+    <!-- <AAAA /> -->
+    <NoticeDemo />
     <!-- <ColorfulCircleDemo /> -->
     <!-- <AnimateQueue /> -->
     <!-- <LightMove /> -->
@@ -33,6 +34,8 @@ export default {
     Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
     AAAA: () => import(/* webpackChunkName: "AAAA" */ "@/components/AAAA"),
+    NoticeDemo: () =>
+      import(/* webpackChunkName: "NoticeDemo" */ "@/components/NoticeDemo"),
     ColorfulCircleDemo: () =>
       import(
         /* webpackChunkName: "ColorfulCircleDemo" */ "@/components/ColorfulCircleDemo"
@@ -84,13 +87,13 @@ export default {
     ScrollList: () =>
       import(/* webpackChunkName: "ScrollList" */ "@/components/ScrollList"),
     FlipDemo: () =>
-      import(/* webpackChunkName: "FlipDemo" */ "@/components/FlipDemo")
+      import(/* webpackChunkName: "FlipDemo" */ "@/components/FlipDemo"),
   },
   data() {
     return {}
   },
   mounted() {},
-  methods: {}
+  methods: {},
 }
 </script>
 <style lang="less">

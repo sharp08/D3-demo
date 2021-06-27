@@ -5,6 +5,10 @@ import store from './store'
 import * as D3 from "d3"
 import MyPlugin from '@/assets/MyPlugin'
 import BaseWin from "@/components/BaseWin"
+
+import notice from '@/components/NoticeDemo/components/Notice';
+Vue.prototype.$notice = notice;
+
 import 'animate.css'
 
 window.D3 = D3
