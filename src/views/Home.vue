@@ -5,25 +5,26 @@
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
-    <!-- <AAAA /> -->
+    <BorderStar />
+    <AAAA />
     <NoticeDemo />
-    <!-- <ColorfulCircleDemo /> -->
-    <!-- <AnimateQueue /> -->
-    <!-- <LightMove /> -->
-    <!-- <Shine /> -->
-    <!-- <SVGLinearFlow /> -->
-    <!-- <SVGHeartBeat /> -->
-    <!-- <OutHidden /> -->
-    <!-- <StatusTransition /> -->
-    <!-- <Drag /> -->
-    <!-- <AnimateCSS /> -->
-    <!-- <ResizableElementDemo /> -->
-    <!-- <CubeDemo /> -->
-    <!-- <PyramidDemo /> -->
-    <!-- <ScrollCountDemo /> -->
-    <!-- <LinearGradientDemo /> -->
-    <!-- <ScrollList /> -->
-    <!-- <FlipDemo /> -->
+    <ColorfulCircleDemo />
+    <AnimateQueue />
+    <LightMove />
+    <Shine />
+    <SVGLinearFlow />
+    <SVGHeartBeat />
+    <OutHidden />
+    <StatusTransition />
+    <Drag />
+    <AnimateCSS />
+    <ResizableElementDemo />
+    <CubeDemo />
+    <PyramidDemo />
+    <ScrollCountDemo />
+    <LinearGradientDemo />
+    <ScrollList />
+    <FlipDemo />
   </div>
 </template>
 
@@ -33,6 +34,8 @@ export default {
   components: {
     Bar: () => import(/* webpackChunkName: "Bar" */ "@/components/Bar"),
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
+    BorderStar: () =>
+      import(/* webpackChunkName: "BorderStar" */ "@/components/BorderStar"),
     AAAA: () => import(/* webpackChunkName: "AAAA" */ "@/components/AAAA"),
     NoticeDemo: () =>
       import(/* webpackChunkName: "NoticeDemo" */ "@/components/NoticeDemo"),
@@ -90,11 +93,11 @@ export default {
       import(/* webpackChunkName: "FlipDemo" */ "@/components/FlipDemo"),
   },
   data() {
-    return {}
+    return {};
   },
   mounted() {},
   methods: {},
-}
+};
 </script>
 <style lang="less">
 .home {
