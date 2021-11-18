@@ -5,6 +5,7 @@
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
+    <ScrollSnap />
     <BorderStar />
     <AAAA />
     <NoticeDemo />
@@ -36,6 +37,8 @@ export default {
     Bar2: () => import(/* webpackChunkName: "Bar2" */ "@/components/Bar2"),
     BorderStar: () =>
       import(/* webpackChunkName: "BorderStar" */ "@/components/BorderStar"),
+    ScrollSnap: () =>
+      import(/* webpackChunkName: "ScrollSnap" */ "@/components/ScrollSnap"),
     AAAA: () => import(/* webpackChunkName: "AAAA" */ "@/components/AAAA"),
     NoticeDemo: () =>
       import(/* webpackChunkName: "NoticeDemo" */ "@/components/NoticeDemo"),
@@ -93,11 +96,11 @@ export default {
       import(/* webpackChunkName: "FlipDemo" */ "@/components/FlipDemo"),
   },
   data() {
-    return {};
+    return {}
   },
   mounted() {},
   methods: {},
-};
+}
 </script>
 <style lang="less">
 .home {

@@ -1,0 +1,83 @@
+@colorList :blue,
+green,
+gray,
+pink;
+
+.scroll-snap {
+  .generalContainer;
+  .globalCenter;
+
+  .box1 {
+    height: 180px;
+    width: 100px;
+    background: red;
+    overflow: auto;
+    scroll-snap-type: y mandatory; // 大意是一次滚动超过半屏就会触发滚动贴合
+    margin-right: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .item {
+      .globalCenter;
+      height: 180px;
+      width: 100px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      scroll-snap-align: start;
+      text-align: center;
+
+
+
+      // 玩个花的
+      each(@colorList, {
+          &:nth-child(@{index}) {
+            background:@value
+          }
+        }
+
+      )
+    }
+  }
+
+  .box2 {
+    height: 180px;
+    width: 100px;
+    background: red;
+    overflow: auto;
+    position: relative;
+
+    .wrap {
+      position: absolute;
+      top: 0;
+      transition: 1s all ease;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .item {
+      .globalCenter;
+      height: 180px;
+      width: 100px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+
+
+
+      // 玩个花的
+      each(@colorList, {
+          &:nth-child(@{index}) {
+            background:@value
+          }
+        }
+
+      )
+    }
+  }
+}
