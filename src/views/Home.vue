@@ -5,27 +5,27 @@
     <!-- <SVGViewBox /> -->
     <!-- <ModalDemo /> -->
     <!-- ************ 以下为标准尺寸 demo ************ -->
-    <ScrollSnap />
     <BorderStar />
-    <AAAA />
-    <NoticeDemo />
-    <ColorfulCircleDemo />
-    <AnimateQueue />
-    <LightMove />
-    <Shine />
-    <SVGLinearFlow />
-    <SVGHeartBeat />
-    <OutHidden />
-    <StatusTransition />
-    <Drag />
-    <AnimateCSS />
-    <ResizableElementDemo />
-    <CubeDemo />
-    <PyramidDemo />
-    <ScrollCountDemo />
-    <LinearGradientDemo />
-    <ScrollList />
-    <FlipDemo />
+    <!-- <ScrollSnap /> -->
+    <!-- <AAAA /> -->
+    <!-- <NoticeDemo /> -->
+    <!-- <ColorfulCircleDemo /> -->
+    <!-- <AnimateQueue /> -->
+    <!-- <LightMove /> -->
+    <!-- <Shine /> -->
+    <!-- <SVGLinearFlow /> -->
+    <!-- <SVGHeartBeat /> -->
+    <!-- <OutHidden /> -->
+    <!-- <StatusTransition /> -->
+    <!-- <Drag /> -->
+    <!-- <AnimateCSS /> -->
+    <!-- <ResizableElementDemo /> -->
+    <!-- <CubeDemo /> -->
+    <!-- <PyramidDemo /> -->
+    <!-- <ScrollCountDemo /> -->
+    <!-- <LinearGradientDemo /> -->
+    <!-- <ScrollList /> -->
+    <!-- <FlipDemo /> -->
   </div>
 </template>
 
